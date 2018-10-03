@@ -22,3 +22,4 @@ Notes: https://onedrive.live.com/redir?resid=9EEEF0CE3FF4D360%211295&page=Edit&w
 The heuristic here is that the distilled network learns how to mimic the classificaiton the big network does, as opposed to performing actual feature extraction from the raw data like the origional network would.
 
 # Testing Various Projected Gradient Descent Epsolon 
+Projected Gradient Descent 
