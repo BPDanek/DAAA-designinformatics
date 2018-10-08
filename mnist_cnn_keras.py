@@ -16,10 +16,10 @@ from keras.layers import Conv2D, MaxPooling2D
 from keras import backend as K
 
 
-batch_size = 128
+batch_size = 3000
 (x_train, y_train), (x_test, y_test) = mnist.load_data()
 num_classes = 10
-epochs = 12
+epochs = 1
 
 # input image dimensions
 img_rows, img_cols = 28, 28
@@ -80,8 +80,13 @@ model.compile(loss=keras.losses.categorical_crossentropy,
               metrics=['accuracy'])
 
 # checkpoint directory
+os.mkdir("training_1")
 checkpoint_path = "training_1/cp.ckpt"
 checkpoint_dir = os.path.dirname(checkpoint_path)
+
+print(os.path.dirname(checkpoint_path))
+print(checkpoint_dir)
+print(checkpoint_path)
 
 # Create checkpoint callback
 cp_callback = tf.keras.callbacks.ModelCheckpoint(checkpoint_path,
